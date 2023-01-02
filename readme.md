@@ -7,9 +7,13 @@ This is a short man page that shows how to create a Docker container for running
 ```
 sudo apt install docker.io
 ```
+* WorkDir
+```
+mkdir compulab-yocker && cd compulab-yocker
+```
 * Clone this repostory:
 ```
-git clone https://github.com/compulab-yokneam/yocker.git
+git clone https://github.com/compulab-yokneam/yocker.git .
 ```
 
 # Create a container
@@ -17,15 +21,15 @@ It is up to developers to decide what container to create.
 
 ## Ubuntu 18.04
 ```
-docker build --config=$(pwd)/docker/Dockerfile-18.04 --no-cache -t yocto-build:v1 docker
+sudo docker build -t yocto-build:v1 - < $(pwd)/docker/Dockerfile-18.04
 ```
 
 ## Ubuntu 20.04
 ```
-docker build --config=$(pwd)/docker/Dockerfile-20.04 --no-cache -t yocto-build:v1 docker
+sudo docker build -t yocto-build:v1 - < $(pwd)/docker/Dockerfile-20.04
 ```
 
 ## Execute docker
 ```
-docker run --interactive --tty  --privileged --volume $(pwd)/work:/work yocto-build:v1
+sudo docker run --interactive --tty  --privileged --volume $(pwd)/work:/work yocto-build:v1
 ```
