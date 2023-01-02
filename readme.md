@@ -38,4 +38,5 @@ sudo docker run --interactive --tty  --privileged --volume $(pwd)/work:/work yoc
 ```
 sudo mkdir in-work
 sudo chown $USER:$USER in-work
+cd in-work
 ```
