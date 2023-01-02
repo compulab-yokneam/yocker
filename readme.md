@@ -33,3 +33,9 @@ sudo docker build -t yocto-build:v1 - < $(pwd)/docker/Dockerfile-20.04
 ```
 sudo docker run --interactive --tty  --privileged --volume $(pwd)/work:/work yocto-build:v1
 ```
+
+## Create internal work folder:
+```
+sudo mkdir in-work
+sudo chown $USER:$USER in-work
+```
