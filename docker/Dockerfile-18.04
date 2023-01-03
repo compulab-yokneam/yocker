@@ -16,7 +16,7 @@ RUN apt-get update && \
         genisoimage sudo socat xterm gawk cpio texinfo \
         gettext vim diffstat chrpath rsync zstd \
         python-mako libusb-1.0-0-dev exuberant-ctags \
-        pngcrush schedtool xsltproc zip zlib1g-dev libswitch-perl tree && \
+        pngcrush schedtool xsltproc zip zlib1g-dev libswitch-perl tree \
 	uuid-runtime grub-common liblz4-tool && \
     apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
