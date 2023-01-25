@@ -19,14 +19,14 @@ git clone https://github.com/compulab-yokneam/yocker.git .
 # Create a container
 It is up to developers to decide what container to create.
 
-## Ubuntu 18.04
-```
-sudo docker build -t yocto-build:v1 - < $(pwd)/docker/Dockerfile-18.04
-```
-
-## Ubuntu 20.04
+## Ubuntu 20.04 (Preferred)
 ```
 sudo docker build -t yocto-build:v1 - < $(pwd)/docker/Dockerfile-20.04
+```
+
+## Ubuntu 18.04 (Optional)
+```
+sudo docker build -t yocto-build:v1 - < $(pwd)/docker/Dockerfile-18.04
 ```
 
 ## Execute docker
