@@ -1,0 +1,52 @@
+#
+# Docker Ubuntu Focal image to build Yocto 3.3
+#
+
+FROM ubuntu:22.04
+
+ENV DEBIAN_FRONTEND=noninteractive
+
+# Keep the dependency list as short as reasonable
+RUN apt-get -q update &&\
+    apt-get -q install -y -o Dpkg::Options::="--force-confnew" --no-install-recommends \
+	gawk wget git-core git-lfs diffstat unzip texinfo gcc-multilib g++-multilib build-essential \
+	chrpath socat cpio python3 python3-pip python3-pexpect \
+	xz-utils debianutils iputils-ping libsdl1.2-dev xterm \
+	language-pack-en coreutils texi2html file docbook-utils \
+	uuid-runtime sharutils tree grub-common uuid-runtime \
+	help2man desktop-file-utils \
+	libgl1-mesa-dev libglu1-mesa-dev mercurial autoconf automake \
+	groff curl lzop asciidoc u-boot-tools libreoffice-writer \
+	sshpass ssh-askpass zip xz-utils kpartx qemu bison flex device-tree-compiler bc rsync \
+	cmake libusb-1.0.0-dev libzip-dev libbz2-dev pkg-config libssl-dev manpages-posix-dev \
+	vim screen sudo libncurses5 zstd liblz4-tool &&\
+    apt-get -q autoremove &&\
+    apt-get -q clean -y && rm -rf /var/lib/apt/lists/* && rm -f /var/cache/apt/*.bin
+
+ADD https://commondatastorage.googleapis.com/git-repo-downloads/repo /usr/local/bin/
+RUN chmod 755 /usr/local/bin/*
+
+# ===== create user/setup environment =====
+RUN useradd --create-home --shell /bin/bash --groups sudo compulab
+RUN echo "compulab ALL=(ALL) NOPASSWD: ALL" > /etc/sudoers.d/compulab
+RUN echo "[color]\n\tui = false\n[user]\n\tname = compulab\n\temail = compulab@CompuLab.com" > /home/compulab/.gitconfig && \
+	chown compulab:compulab /home/compulab/.gitconfig && \
+	chmod 0644 /home/compulab/.gitconfig
+
+# Improve rebuild performance by enabling compiler cache
+ENV USE_CCACHE 1
+ENV CCACHE_DIR /home/compulab/.ccache
+
+# some QT-Apps/Gazebo do not show controls without this
+ENV QT_X11_NO_MITSHM 1
+
+# Set the locale
+RUN locale-gen en_US.UTF-8
+ENV LANG en_US.UTF-8
+ 
+ENV HOME /home/compulab
+ENV USER compulab
+USER compulab
+
+# build environment
+WORKDIR /work
