@@ -10,9 +10,9 @@ This is a short man page that shows how to create a Docker container for running
 |ucm-imx93l|||||22.04|
 |ucm-imx93||||20.04|22.04|
 |ucm-imx8m-plus|18.04|18.04|20.04|20.04|22.04|
-|cl-som-imx8plus|18.04|18.04|20.04|20.04|22.04|
-|mcm-imx8m-mini|18.04|18.04|20.04|20.04|22.04|
-|ucm-imx8m-mini|18.04|18.04|20.04|20.04|22.04|
+|cl-som-imx8plus|18.04|18.04|20.04|20.04||
+|mcm-imx8m-mini|18.04|18.04|20.04|20.04||
+|ucm-imx8m-mini|18.04|18.04|20.04|20.04||
 
 
 # Requirements
