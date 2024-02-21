@@ -9,6 +9,7 @@ This is a short man page that shows how to create a Docker container for running
 |ucm-imx93l|||||**22.04<br>(```release```)<br>**|
 |ucm-imx93||||**20.04<br>(```release```)<br>**||
 |ucm-imx8m-plus|18.04|18.04|20.04|20.04|**22.04<br>(```release```)<br>**|
+|mcm-imx8m-plus|||||**22.04<br>(```rc0```)<br>**|
 |cl-som-imx8plus|18.04|18.04|20.04|**20.04<br>(```release```)<br>**||
 |iot-gate-imx8plus|18.04|18.04|20.04|**20.04<br>(```release```)<br>**||
 |mcm-imx8m-mini|18.04|18.04|20.04|**20.04<br>(```release```)<br>**||
