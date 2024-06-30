@@ -4,8 +4,8 @@ This is a short man page that shows how to create a Docker container for running
 
 # Compatibility Matrix
 
-|mach\distro|hardknott|gatesgarth|honister|kirkstone|mikledore|
-|---|---|---|---|---|---|
+|mach\distro|hardknott|gatesgarth|honister|kirkstone|mikledore|nanbield|scarthgap
+|---|---|---|---|---|---|---|---|
 |ucm-imx93l|||||**22.04<br>(```release```)<br>**|
 |ucm-imx93||||**20.04<br>(```below release 2.0```)<br>**|**22.04<br>(```release 2.0 and above```)<br>**|
 |ucm-imx8m-plus|18.04|18.04|20.04|20.04|**22.04<br>(```release```)<br>**|
