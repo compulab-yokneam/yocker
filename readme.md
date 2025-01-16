@@ -6,9 +6,9 @@ This is a short man page that shows how to create a Docker container for running
 
 |mach\distro|hardknott|gatesgarth|honister|kirkstone|mikledore|nanbield|scarthgap
 |---|---|---|---|---|---|---|---|
-|ucm-imx93l|||||**22.04<br>(```release```)<br>**|
-|ucm-imx93||||**20.04<br>(```below release 2.0```)<br>**|**22.04<br>(```release 2.0 and above```)<br>**|
-|mcm-imx93||||||**22.04<br>(```release```)<br>**|
+|ucm-imx93l|||||22.04<br>(```below 3.0```)||22.04<br>(```3.0```)<br>
+|ucm-imx93||||20.04<br>(```below 2.0```)|22.04<br>(```2.0```)||22.04<br>(```3.0```)
+|mcm-imx93||||||22.04<br>(```1.0```)|
 |ucm-imx8m-plus|18.04|18.04|20.04|20.04|**22.04<br>(```release```)<br>**|**22.04<br>(```release```)<br>**|**22.04<br>(```release```)<br>**|
 |mcm-imx8m-plus|||||**22.04<br>(```rc0```)<br>**|
 |cl-som-imx8plus|18.04|18.04|20.04|**20.04<br>(```release```)<br>**||
