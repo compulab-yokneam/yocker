@@ -13,7 +13,7 @@ This is a short man page that shows how to create a Docker container for running
 |mcm-imx93||||||**22.04<br>(```1.0```)<br>**|
 |ucm-imx8m-plus||||**20.04<br>(```2.0```)<br>**|**22.04<br>(```3.0```)<br>**||**22.04<br>(```4.0```)<br>**|
 |mcm-imx8m-plus|||||**22.04<br>(```1.0```)<br>**||**22.04<br>(```2.0 rc```)<br>**|
-|cl-som-imx8plus||**18.04<br>(```1.0```)<br>**|20.04|20.04|**22.04<br>(```2.0```)<br>**||**22.04<br>(```3.0 rc```)<br>**|
+|cl-som-imx8plus||**18.04<br>(```1.0```)<br>**|||**22.04<br>(```2.0```)<br>**||**22.04<br>(```3.0 rc```)<br>**|
 |iot-gate-imx8plus|||||**22.04<br>(```2.0```)<br>**||**22.04<br>(```3.0```)<br>**|
 |iot-din-imx8plus||||**20.04<br>(```1.0```)<br>**|||**22.04<br>(```2.0```)<br>**|
 |mcm-imx8m-mini||||**20.04<br>(```2.0```)<br>**||
